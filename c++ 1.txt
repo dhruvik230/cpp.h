@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int totalSeconds;
+    int hours, minutes, seconds;
+
+    // Take input in seconds
+    cout << "Enter time in seconds: ";
+    cin >> totalSeconds;
+
+    // Convert seconds to HH:MM:SS
+    hours = totalSeconds / 3600;
+    totalSeconds %= 3600;
+    minutes = totalSeconds / 60;
+    seconds = totalSeconds % 60;
+
+    // Display output
+    cout << "Converted Time (HH:MM:SS): ";
+    if (hours < 10) cout << "0";
+    cout << hours << ":";
+
+    if (minutes < 10) cout << "0";
+    cout << minutes << ":";
+
+    if (seconds < 10) cout << "0";
+    cout << seconds << endl;
+
+    return 0;
+}
